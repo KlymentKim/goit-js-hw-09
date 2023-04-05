@@ -1,0 +1,1 @@
+{"mappings":"AACAA,YAAW,QAET","sources":["src/js/01-color-switcher.js"],"sourcesContent":["\nsetTimeout(()=>{\n\n},1000);\nfunction getRandomHexColor() {\n    return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, 0)}`;\n  }"],"names":["setTimeout"],"version":3,"file":"01-color-switcher.8429b961.js.map"}
