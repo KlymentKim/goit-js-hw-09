@@ -1,8 +1,8 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 
-const input = document.querySelector('input[datetime-picker]');
-const buttonStart = document.querySelector('[data-start]');
+const dateTimePicker  = document.querySelector('#datetime-picker');
+const startButton = document.querySelector('[data-start]');
 const days = document.querySelector("[data-days]");
 const hours = document.querySelector("[data-hours]");
 const minutes = document.querySelector("[data-minutes]");
@@ -17,13 +17,13 @@ const seconds = document.querySelector("[data-seconds]");
 //     console.log(selectedDates[0]);
 //   },
 // };
-// function convertMs(ms) {
-//     // Number of milliseconds per unit of time
-//     const second = 1000;
-//     const minute = second * 60;
-//     const hour = minute * 60;
-//     const day = hour * 24;
-// }
+function convertMs(ms) {
+    // Number of milliseconds per unit of time
+    const second = 1000;
+    const minute = second * 60;
+    const hour = minute * 60;
+    const day = hour * 24;
+}
 
 let countdown;
 
@@ -64,7 +64,7 @@ startButton.addEventListener("click", () => {
 
     if (distance < 0) {
       clearInterval(countdown);
-      days.textContent = "00";
+      console.log(days.textContent = "00"); 
       hours.textContent = "00";
       minutes.textContent = "00";
       seconds.textContent = "00";
