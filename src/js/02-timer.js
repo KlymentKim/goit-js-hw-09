@@ -17,13 +17,13 @@ const seconds = document.querySelector("[data-seconds]");
 //     console.log(selectedDates[0]);
 //   },
 // };
-function convertMs(ms) {
-    // Number of milliseconds per unit of time
-    const second = 1000;
-    const minute = second * 60;
-    const hour = minute * 60;
-    const day = hour * 24;
-}
+// function convertMs(ms) {
+//     // Number of milliseconds per unit of time
+//     const second = 1000;
+//     const minute = second * 60;
+//     const hour = minute * 60;
+//     const day = hour * 24;
+// }
 
 let countdown;
 
@@ -57,10 +57,15 @@ startButton.addEventListener("click", () => {
     const minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
 
-    days.textContent = daysLeft < 10 ? `0${daysLeft}` : daysLeft;
-    hours.textContent = hoursLeft < 10 ? `0${hoursLeft}` : hoursLeft;
-    minutes.textContent = minutesLeft < 10 ? `0${minutesLeft}` : minutesLeft;
-    seconds.textContent = secondsLeft < 10 ? `0${secondsLeft}` : secondsLeft;
+    // days.textContent = daysLeft < 10 ? `0${daysLeft}` : daysLeft;
+    // hours.textContent = hoursLeft < 10 ? `0${hoursLeft}` : hoursLeft;
+    // minutes.textContent = minutesLeft < 10 ? `0${minutesLeft}` : minutesLeft;
+    //   seconds.textContent = secondsLeft < 10 ? `0${secondsLeft}` : secondsLeft;
+      
+      days.textContent = daysLeft.toString().padStart(2, '0');
+      hours.textContent = hoursLeft.toString().padStart(2, '0');
+      minutes.textContent = minutesLeft.toString().padStart(2, '0');
+      seconds.textContent = secondsLeft.toString().padStart(2, '0');
 
     if (distance < 0) {
       clearInterval(countdown);
