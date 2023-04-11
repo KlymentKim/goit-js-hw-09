@@ -37,14 +37,14 @@ img {
   padding: 0px 36px 5px;
  }
  #datetime-picker, button{
-  padding: 5px 10px;
+  padding: 5px 5px;
   font-size: 16px;
   margin: 15px 1px;
   letter-spacing: 0.05em;
   
  }
  input{
-  width: 24%;
+   width: 24%;
  }
  p, a, ul{
   color: #fafafa;
