@@ -20,13 +20,14 @@ const options = {
     const selectedDate = selectedDates[0];
 
     if (selectedDate < new Date()) {
-      Notiflix.Report.info('Error','Please choose a date in the future', 'Ok');
+      Notiflix.Report.warning('Error','Please choose a date in the future', 'Ok');
       startButton.disabled = true;
     } else {
       startButton.disabled = false;
     }
   },
 };
+
 
 flatpickr(dateTimePicker, options);
 
