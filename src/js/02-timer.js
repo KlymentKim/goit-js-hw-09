@@ -1,7 +1,7 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 
-const dateTimePicker  = document.querySelector('#datetime-picker');
+const dateTimePicker  = document.getElementById('datetime-picker');
 const startButton = document.querySelector('[data-start]');
 const days = document.querySelector("[data-days]");
 const hours = document.querySelector("[data-hours]");
@@ -40,10 +40,6 @@ startButton.addEventListener("click", () => {
     const minutesLeft = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const secondsLeft = Math.floor((distance % (1000 * 60)) / 1000);
 
-    // days.textContent = daysLeft < 10 ? `0${daysLeft}` : daysLeft;
-    // hours.textContent = hoursLeft < 10 ? `0${hoursLeft}` : hoursLeft;
-    // minutes.textContent = minutesLeft < 10 ? `0${minutesLeft}` : minutesLeft;
-    //   seconds.textContent = secondsLeft < 10 ? `0${secondsLeft}` : secondsLeft;
       
       days.textContent = daysLeft.toString().padStart(2, '0');
       hours.textContent = hoursLeft.toString().padStart(2, '0');

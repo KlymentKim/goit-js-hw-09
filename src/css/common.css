@@ -10,6 +10,7 @@ body {
   background-color: #fafafa;
   color: #fdf6f6;
   line-height: 1.5;
+  list-style: none;
   background-image: url('https://wallpaperaccess.com/full/1555163.jpg');
 }
 
@@ -24,22 +25,52 @@ img {
   flex-direction: row;
   align-items: center;
 }
-/* .field{
+.field{
   display: flex;
   flex-direction:column;
-} */
-.label, .value{
-  display: flex;
   align-items: center;
-  justify-content: center;
-  
+  text-transform: uppercase;
 }
- .value{
-  margin: 5px;
-  font-size: 26px;
-  padding: 0px 25px;
- }
- ::after{
-  content: "";
 
+ .value{
+  font-size: 26px;
+  padding: 0px 36px 5px;
  }
+ #datetime-picker, button{
+  padding: 5px 10px;
+  font-size: 16px;
+  margin: 15px 1px;
+  letter-spacing: 0.05em;
+ }
+ input{
+  width: 25%;
+ }
+ p, a, ul{
+  color: #fafafa;
+  text-decoration: none;
+  list-style: none;
+}
+
+a{
+  position: relative;
+  text-decoration: none;
+  color: whitesmoke;
+  line-height: 1.5;
+}
+p,a:hover {
+  color: chartreuse;
+}
+a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: chartreuse;
+  transition: width 0.5s ease-out;
+}
+
+a:hover::before {
+  width: 100%;
+}
