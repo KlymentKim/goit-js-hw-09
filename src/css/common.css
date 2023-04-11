@@ -41,9 +41,10 @@ img {
   font-size: 16px;
   margin: 15px 1px;
   letter-spacing: 0.05em;
+  
  }
  input{
-  width: 25%;
+  width: 24%;
  }
  p, a, ul{
   color: #fafafa;

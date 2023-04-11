@@ -19,7 +19,8 @@ const options = {
     const selectedDate = selectedDates[0];
 
     if (selectedDate < new Date()) {
-      window.alert("Please choose a date in the future");
+      alert("Please choose a date in the future");
+      alert.style.color = red;
       startButton.disabled = true;
     } else {
       startButton.disabled = false;
